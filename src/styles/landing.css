@@ -1,0 +1,69 @@
+.mainPage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  height: 100vh;
+
+  font-size: 16px;
+  background: linear-gradient(329.54deg, #2dc7ed 0%, #538bf0 100%);
+}
+.weather {
+  position: relative;
+  width: 80%;
+  float: right;
+  height: 100vh;
+}
+.mainPage form {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  width: 500px;
+  padding: 30px;
+  background: transparent;
+  margin: 50px auto;
+}
+.mainPage h2 {
+  font-size: 25px;
+}
+.mainPage input,
+button {
+  display: flex;
+  flex-direction: row;
+}
+.mainPage input {
+  box-sizing: border-box;
+  outline: none;
+  display: block;
+
+  height: 45px;
+  width: 100%;
+  padding: 7px;
+
+  text-align: center;
+  color: #fff;
+
+  border: none;
+  border-bottom: 1px solid #fff;
+  background: transparent;
+
+  margin-bottom: 10px;
+}
+.mainPage ::-webkit-input-placeholder {
+  text-align: left;
+  color: #fff;
+  opacity: 0.5;
+}
+.mainPage button {
+  width: 40px;
+  height: 40px;
+  margin-left: 5px;
+
+  background: transparent;
+  outline: none;
+  border: none;
+
+  cursor: pointer;
+}
