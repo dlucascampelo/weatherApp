@@ -20,8 +20,7 @@
   height: 200px;
   object-fit: cover;
 }
-.about-content-wrapper h2 {
-}
+
 #profilelinks {
   display: flex;
   flex-direction: row;

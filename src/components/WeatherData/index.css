@@ -1,0 +1,25 @@
+.weatherContainer {
+  text-align: center;
+  margin-top: 3rem;
+}
+.weatherContainer .title {
+  font-size: 30px;
+}
+.dataContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.dataType {
+  font-size: 20px;
+  text-transform: uppercase;
+  margin: 40px 0 20px 0;
+}
+.dataValue {
+  color: #131d47;
+  font-size: 4rem;
+  line-height: 0.6;
+  font-weight: 400;
+  padding: 0 30px 0 30px;
+}
