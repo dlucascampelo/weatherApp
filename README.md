@@ -28,7 +28,6 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 - [Node.js](https://nodejs.org/en/)
 - [React](https://reactjs.org)
 - [JavaScript](https://www.javascript.com/)
-- Deploy na [Vercel](https://vercel.com/dashboard)
 
 ## :memo: Licença
 
