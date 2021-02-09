@@ -8,20 +8,18 @@ const SideBar = () => {
     <div id="container">
       <aside className="sidebar">
         <nav className="nav">
-          <img src={logo} alt="" srcset="" />
+          <Link to="/" className="enter-about">
+            <img src={logo} alt="" srcset="" />
+          </Link>
           <ul>
             <li className="active">
               <Link to="/" className="enter-about">
                 Home
               </Link>
             </li>
+            <li></li>
             <li>
-              <Link to="/" className="enter-about">
-                Buscas favoritas
-              </Link>
-            </li>
-            <li>
-              <Link to="/" className="enter-about">
+              <Link to="historySearch" className="enter-about">
                 Buscas reecntes
               </Link>
             </li>

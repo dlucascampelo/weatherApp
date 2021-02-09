@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 
 import { BiSearch } from "react-icons/bi";
@@ -11,18 +11,35 @@ import WeatherData from "../components/WeatherData";
 const Landing = () => {
   const [weather, setWeather] = useState();
   const [location, setLocation] = useState();
+  const [geoLocation, setGeoLocation] = useState();
 
   const apiCall = async (e) => {
     e.preventDefault();
-    const location = e.target.elements.location.value;
+    const location = [
+      e.target.elements.locationCity.value,
+      e.target.elements.locationCountry.value,
+    ];
 
-    const url = `http://api.weatherstack.com/current?access_key=${process.env.REACT_APP_WEATHERSTACK_KEY}&query=${location}`;
-    const request = axios.get(url);
-    const response = await request;
+    const url = `http://api.weatherstack.com/current?access_key=${process.env.REACT_APP_WEATHERSTACK_KEY}&query=${location}language=pt_br`;
+    const response = await axios.get(url);
 
     setWeather(response.data.current);
     setLocation(response.data.location);
-    console.log(response);
+
+    const recentWeather = { recent: [] };
+
+    if (localStorage.getItem("forecastWeather")) {
+      recentWeather.recent = JSON.parse(
+        localStorage.getItem("forecastWeather")
+      ).recent;
+    }
+
+    recentWeather.recent.push({
+      weather: response.data.current,
+      location: response.data.location,
+    });
+
+    localStorage.setItem("forecastWeather", JSON.stringify(recentWeather));
   };
 
   return (
@@ -31,12 +48,19 @@ const Landing = () => {
 
       <div className="weather">
         <div className="mainPage">
-          <h2>Busque por uma cidade</h2>
+          <h2>Busque por um local</h2>
+
           <form onSubmit={apiCall}>
             <input
-              name="location"
+              name="locationCity"
               type="text"
-              placeholder="Busque por uma cidade"
+              placeholder="Recife"
+              required
+            />
+            <input
+              name="locationCountry"
+              type="text"
+              placeholder="Brasil"
               required
             />
             <button type="submit">

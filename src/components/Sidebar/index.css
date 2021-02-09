@@ -15,7 +15,7 @@
   font-weight: bold;
 }
 .nav img {
-  width: 30%;
+  width: 32%;
 }
 
 .nav ul {
@@ -23,7 +23,7 @@
 }
 .nav li {
   position: relative;
-  margin: 3.2em 0;
+  margin: 4em 0;
 }
 .nav a {
   line-height: 5em;

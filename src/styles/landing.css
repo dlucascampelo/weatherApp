@@ -20,18 +20,13 @@
   flex-direction: row;
   align-items: center;
 
-  width: 500px;
+  width: 50%;
   padding: 30px;
   background: transparent;
   margin: 50px auto;
 }
 .mainPage h2 {
   font-size: 25px;
-}
-.mainPage input,
-button {
-  display: flex;
-  flex-direction: row;
 }
 .mainPage input {
   box-sizing: border-box;
@@ -41,6 +36,7 @@ button {
   height: 45px;
   width: 100%;
   padding: 7px;
+  margin: 10px;
 
   text-align: center;
   color: #fff;

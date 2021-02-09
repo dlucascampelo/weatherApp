@@ -3,7 +3,6 @@ import "../styles/global.css";
 import "../styles/about.css";
 import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
 import lucasimg from "../assets/lucasimg.jpg";
-
 import SideBar from "../components/Sidebar";
 
 const About = () => {
