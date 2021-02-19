@@ -45,3 +45,7 @@
 
   font: bold 20px Nunito, sans-serif;
 }
+#gitlink {
+  text-decoration: none;
+  color: #171515;
+}
