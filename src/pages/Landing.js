@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import axios from "axios";
 
 import { BiSearch } from "react-icons/bi";
@@ -11,7 +11,6 @@ import WeatherData from "../components/WeatherData";
 const Landing = () => {
   const [weather, setWeather] = useState();
   const [location, setLocation] = useState();
-  const [geoLocation, setGeoLocation] = useState();
 
   const apiCall = async (e) => {
     e.preventDefault();
@@ -20,7 +19,7 @@ const Landing = () => {
       e.target.elements.locationCountry.value,
     ];
 
-    const url = `https://api.weatherstack.com/current?access_key=${process.env.REACT_APP_WEATHERSTACK_KEY}&query=${location}language=pt_br`;
+    const url = `http://api.weatherstack.com/current?access_key=${process.env.REACT_APP_WEATHERSTACK_KEY}&query=${location}`;
     const response = await axios.get(url);
 
     setWeather(response.data.current);
