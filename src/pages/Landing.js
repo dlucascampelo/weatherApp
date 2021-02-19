@@ -20,7 +20,7 @@ const Landing = () => {
       e.target.elements.locationCountry.value,
     ];
 
-    const url = `http://api.weatherstack.com/current?access_key=${process.env.REACT_APP_WEATHERSTACK_KEY}&query=${location}language=pt_br`;
+    const url = `https://api.weatherstack.com/current?access_key=${process.env.REACT_APP_WEATHERSTACK_KEY}&query=${location}language=pt_br`;
     const response = await axios.get(url);
 
     setWeather(response.data.current);
