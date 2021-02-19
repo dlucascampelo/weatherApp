@@ -23,14 +23,14 @@ const About = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <FaGithub size={50} color="#000" />
+                <FaGithub size={50} color="#171515" />
               </a>
               <a
                 href="https://www.linkedin.com/in/lucas-campelo-858562186/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <FaLinkedin size={50} color="#0e76a8" />
+                <FaLinkedin size={50} color="#0b5e86" />
               </a>
               <a
                 href="https://www.instagram.com/dlucascampelo/"
@@ -45,7 +45,16 @@ const About = () => {
               <span>
                 <hr />
                 Esse é um projeto desenvolvido como um teste pra uma vaga de
-                estágio. Para mais informações, visite o meu GitHub!
+                estágio. Para mais informações, visite o projeto no{" "}
+                <a
+                  id="gitlink"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href=" https://github.com/dlucascampelo/weatherApp"
+                >
+                  GitHub
+                </a>
+                !
               </span>
             </div>
           </div>
